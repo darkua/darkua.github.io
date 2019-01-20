@@ -1,100 +1,34 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/abc.css">
+		<title>Web Face ID by Machine Box</title>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css'>
+		<link rel='stylesheet' href='/assets/app.css'>
 	</head>
-
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section id="logos">
-					<img src="/img/abc_logo.svg"/>
-					<br>
-					<p>AUTONOMOS BLOCKCHAIN COMMUNITY</p>
-					<p style="margin-top:10px"></p>
-					<p class="fragment fade-up">Group Of Developers</p>
-					<span>
-				</section>
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section id="manifesto">
-						<p>?How to think decentralize</p>
-						<p>or</p>
-						<p>?How to decentralize thinking</p>
-						<a href="#" class="navigate-down">
-							<img width="111px" height="111px" data-src="img/down.svg" alt="Down arrow">
-						</a>
-					</section>
-					<section id="mission">
-						<h1 style="color:red">MISSION:</h1>
-						<p class="fragment fade-up">Create a COMMUNITY. A GlObal FAmily.</p>
-						<p class="fragment fade-up"> 
-							A common goal : give birth to A.I.D.A. ( Artifical.Inteligent.Decentratalized.Agent) and train her to be the C.E.O of a network where humans, artifical autonomos agents, and connected things, can all use the same language to exchange value in a common economical space, so we can…
-						</p>
-						<div class="fragment fade-up">
-							<img  src="/img/baran_nets_large.gif"/>
-							<p>PAST ------------------->PRESENT ----_NOW -------------> FUTURE</p>
-							<p style="color:red">decentralize processes to distribute better value</p>
-						</div>
-					</section>
-					<section id="why">
-						<p style="color:red">WHY?</p>
-						<p class="fragment fade-up">because</p>
-						<p class="fragment fade-up">we the humans</p>
-						<p class="fragment fade-up">need a decentralized gobal network</p>
-						<p class="fragment fade-up">that can address the global problems we created.</p>
-						<p class="fragment fade-up">If we cant help us, we need to create something that can do so.</p>
-						<p class="fragment fade-up">And NOW its already possible to do so, in REALITY!</p>
-						<p class="fragment fade-up">
-						<a href="#/how" class="navigate-left" style="">
-							<img width="111px" height="111px" data-src="img/left.svg" alt="Left arrow">
-						</a>
-					</section>
-					<section>Money as a technical object of social design.Smart, programmable money can be both currency and equity at the same time.By creating and integrating more relationships, the networked business broadens its opportunity space and increases its intellectual capital as the nodes of the network do the same. The zero sum job market changes into a network with increasing returns. Firms are social and legal constructs. They are what we think firms are. It is time to renew our old construct of the firm as a newer version, a creativity- and innovation-based view of the firm, utilizing the new post-blockchain smart contracts and network effects.</section>	
-
-				</section>
-				<section id="how">
-					<p style="color:red">HOW?</p>
-
-						<p>
-							<input placeholder="How would you do? Write yours so you can read ours. " style="border:none;border-bottom: 1px solid black; width:100%;"></input>
-						</p>
-						
-						<a href="#/stack" class="navigate-up" style="">
-							<img width="111px" height="111px" data-src="img/left.svg" alt="up arrow">
-						</a>
-				</section>
-				<section id="stack">
-					<p style="color:red">STACK?</p>
-						<p>
-							> Think Comunication as p2p.
-							> Think Data as blockchains.
-							> Think Money as icentive Function.
-							> Think Node, as anything it exists.
-							> Think Community, as your market. 
-							> Think Problems, as missing network protocols.
-						</p><p>
-							________________________________________ Think
-						</p>
-				</section>
-				<section>
-					> Create a Protocol that can be more then the sum of all the parts of the Network.
-					> Call it Conscience.
-				</section>
-				<section>
-					<blockquote>“For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.”</blockquote>
-				</section>
-			</div>
+		<div class='options'>
+			<button id="teach" class="ui teal massive circular icon button">
+				<i class='camera icon'></i>
+				Teach
+			</button>
+			<button id="snap" class="ui teal massive circular icon button">
+				<i class='camera icon'></i>
+				Snap(wait)
+			</button>
+			<div class='ui info message' style='display:none'></div>
 		</div>
-		<script src="js/reveal.js"></script>
-		<script>
-			Reveal.initialize({
-				controls:true,
-				controlsTutorial: true,
-				controlsLayout: 'edges',
-				history: true,
-				rtl: true,
-			});
-		</script>
+		<form>
+				First name:<br>
+			<input type="text" id="name"><br>
+			Temp Id:<br>
+			<input type='text' id='id'><br>
+			<input type="submit" value="Submit">			
+		</form>
+		<video id="video" width="100%" muted autoplay></video>
+		<!-- <input type="file" accept="image/*" capture="image/*;capture=camera" /> -->
+		<canvas id="canvas" width="400" height="225" style="display:none;"></canvas>
+		<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+		<script src='/assets/arg.js'></script>
+		<script src='/assets/app.js'></script>
 	</body>
 </html>

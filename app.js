@@ -15,6 +15,7 @@ $(function () {
 
 	let name;
 	let id;
+	let host = "http://157.230.20.220:9000"
 	document.querySelector('form').addEventListener("submit", function (event) {
 		event.preventDefault()
 		var teachButton = $('#teach')
@@ -25,7 +26,7 @@ $(function () {
 			var dataURL = canvas.toDataURL();
 			$.ajax({
 				type: "POST",
-				url: "/facebox/teach",
+				url: `${host}/facebox/teach`,
 				data: {
 					imgBase64: dataURL,
 					name: event.target[0].value,
@@ -54,7 +55,7 @@ $(function () {
 		var dataURL = canvas.toDataURL();
 		$.ajax({
 			type: "POST",
-			url: "/webFaceID",
+			url: `${host}/webFaceID`,
 			data: {
 				imgBase64: dataURL
 			},
